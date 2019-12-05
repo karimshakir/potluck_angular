@@ -1,8 +1,10 @@
+import { Time } from "@angular/common";
+
 export class Event {
   eventId: number;
-  event_name: string;
-  event_date: Date;
-  event_time: string;
-  event_location: string;
+  eventName: string;
+  eventDate: string;
+  eventTime: Time;
+  eventLocation: string;
   constructor() {}
 }

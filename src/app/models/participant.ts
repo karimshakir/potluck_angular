@@ -1,9 +1,6 @@
-export class User {
+export class Participant {
   userId: number;
-  user_name: string;
-  password: string;
-  f_name: string;
-  l_name: string;
-  // albums: Album[];
+  eventId: number;
+  dish: string;
   constructor() {}
 }
