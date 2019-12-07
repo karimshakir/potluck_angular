@@ -9,16 +9,6 @@ import { EVENTS } from "../mock-events";
   styleUrls: ["./event.component.css"]
 })
 
-// event1: Event = {
-//   eventId: 1,
-//   eventName: "retirement1",
-//   eventDate: "2019-01-11",
-//   eventTime: {
-//     hours: 1,
-//     minutes: 30
-// },
-//   eventLocation: "room 112"
-// };
 export class EventComponent implements OnInit {
   events = EVENTS;
   selectedEvent: Event;
@@ -31,3 +21,4 @@ export class EventComponent implements OnInit {
     this.selectedEvent = event;
   }
 }
+

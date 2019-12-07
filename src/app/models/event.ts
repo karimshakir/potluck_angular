@@ -8,5 +8,3 @@ export class Event {
   eventLocation: string;
   constructor() {}
 }
-
-

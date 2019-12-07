@@ -11,8 +11,8 @@ export class UserComponent implements OnInit {
     userId: 1,
     userName: "user1",
     password: "password",
-    fName: "User1's first name",
-    lName: "lUser1's last name"
+    fName: "fUser1",
+    lName: "lUser1"
   };
   user2: User = {
     userId: 2,
