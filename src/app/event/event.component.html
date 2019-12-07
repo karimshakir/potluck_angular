@@ -1,5 +1,5 @@
 <h2>My Events</h2>
-<ul class="events">
+<!-- <ul class="events">
   <li
     *ngFor="let event of events"
     [class.selected]="event === selectedEvent"
@@ -21,6 +21,24 @@
       <input [(ngModel)]="selectedEvent.eventName" placeholder="name" />
     </label>
   </div>
+</div> -->
+<div class="events">
+  <table >
+      <!-- <tr *ngFor="let event of events">
+        <th>Event Id</th>
+        <td>{{event.eventDate}}</td> -->
+      <tr>
+        <th>Event Name</th>
+        <th>Event Date </th>
+        <th>Event Time</th>
+        <th>Event Location</th>
+      </tr>
+      <tr *ngFor="let event of events">
+        <td>{{event.eventName}}</td>
+        <td>{{event.eventDate}}</td>
+        <td>{{event.eventTime}}</td>
+        <td>{{event.eventLocation}}</td>
+      </tr>
+  </table>
 </div>
-
 
