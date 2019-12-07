@@ -1,0 +1,22 @@
+#user_table {
+    font-family:  "Helvetica", Arial;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #user_table td, #user_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #user_table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #user_table tr:hover {background-color: rgba(224, 229, 238, 0.377);}
+  
+  #user_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(247, 159, 77);
+    color: white;
+  }

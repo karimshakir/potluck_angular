@@ -1,22 +1,17 @@
-<h2>Participants</h2>
-<ul class="participants">
-  <li
-    *ngFor="let participant of participants"
-    [class.selected]="participant === selectedParticipant"
-    (click)="onSelect(participant)"
-  >
-    <span class="badge">{{ participant.dish }}</span>
-    {{participant.userId}}
-  </li>
-</ul>
-
-<div *ngIf="selectedParticipant">
-  <h2>{{ selectedParticipant | uppercase }} Details</h2>
-  <div><span>id: </span>{{ selectedParticipant.dish }}</div>
-  <div>
-    <label
-      >name:
-      <input [(ngModel)]="selectedParticipant.dish" placeholder="dish" />
-    </label>
-  </div>
+<p>participant works!</p>
+<div id="participants_table">
+  <table>
+    <tr>
+      <th>Event Name</th>
+      <th>Event Date</th>
+      <th>Event Time</th>
+      <th>Event Location</th>
+    </tr>
+    <!-- <tr *ngFor="let event of events">
+            <td>{{event.eventName}}</td>
+            <td>{{event.eventDate}}</td>
+            <td>{{event.eventTime}}</td>
+            <td>{{event.eventLocation}}</td>
+        </tr> -->
+  </table>
 </div>

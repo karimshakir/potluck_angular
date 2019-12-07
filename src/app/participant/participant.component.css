@@ -1,0 +1,22 @@
+#participants_table {
+    font-family:  "Helvetica", Arial;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #participants_table td, #participants_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #participants_table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #participants_table tr:hover {background-color: rgba(224, 229, 238, 0.377);}
+  
+  #participants_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(19, 168, 5);
+    color: white;
+  }
