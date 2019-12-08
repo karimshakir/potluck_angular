@@ -1,4 +1,4 @@
-<h2>My Events</h2>
+<h2>Events</h2>
 <!-- <ul class="events">
   <li
     *ngFor="let event of events"
@@ -34,10 +34,18 @@
         <th>Event Location</th>
       </tr>
       <tr *ngFor="let event of events">
-        <td>{{event.eventName}}</td>
-        <td>{{event.eventDate}}</td>
-        <td>{{event.eventTime}}</td>
-        <td>{{event.eventLocation}}</td>
+        <td>{{event.eventName}}
+        <td>{{event.eventDate}}
+        <td>{{event.eventTime}}
+        <td>{{event.eventLocation}} </td>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-primary">Remove</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <button type="button" class="btn btn-light">Details</button>
+        </div>
+      </div>
       </tr>
   </table>
 </div>
