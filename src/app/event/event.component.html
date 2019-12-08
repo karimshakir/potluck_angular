@@ -5,13 +5,15 @@
         <!-- all this fields may need to be required -->
         <th>Event Name</th>
         <th>Event Date </th>
-        <th>Event Time</th>
+        <th>Event Start Time</th>
+        <th>Event End Time</th>
         <th>Event Location</th>
       </tr>
       <tr *ngFor="let event of events">
         <td>{{event.eventName}}</td>
         <td>{{event.eventDate}}</td>
-        <td>{{event.eventTime.hours }} : {{event.eventTime.minutes}}</td>
+        <td>{{event.startTime.hours }} : {{event.startTime.minutes}}</td>
+        <td>{{event.endTime.hours }} : {{event.endTime.minutes}}</td>
         <td>{{event.eventLocation}}</td>
       </tr>
   </table>

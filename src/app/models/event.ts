@@ -4,7 +4,8 @@ export class Event {
   eventId: number;
   eventName: string;
   eventDate: string;
-  eventTime: Time;
+  startTime: Time;
+  endTime: Time;
   eventLocation: string;
   constructor() {}
 }

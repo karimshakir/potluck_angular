@@ -5,8 +5,12 @@ export const EVENTS: Event[] = [
     eventId: 1,
     eventName: "retirement1",
     eventDate: "2019-01-11",
-    eventTime: {
+    startTime: {
       hours: 1,
+      minutes: 30
+    },
+    endTime: {
+      hours: 10,
       minutes: 30
     },
     eventLocation: "room 112"
@@ -15,8 +19,12 @@ export const EVENTS: Event[] = [
     eventId: 2,
     eventName: "retirement2",
     eventDate: "2019-02-12",
-    eventTime: {
+    startTime: {
       hours: 2,
+      minutes: 30
+    },
+    endTime: {
+      hours: 10,
       minutes: 30
     },
     eventLocation: "room 212"
@@ -25,8 +33,12 @@ export const EVENTS: Event[] = [
     eventId: 3,
     eventName: "retirement3",
     eventDate: "2019-03-13",
-    eventTime: {
+    startTime: {
       hours: 3,
+      minutes: 30
+    },
+    endTime: {
+      hours: 10,
       minutes: 30
     },
     eventLocation: "room 312"
@@ -35,8 +47,12 @@ export const EVENTS: Event[] = [
     eventId: 4,
     eventName: "retirement4",
     eventDate: "2019-04-14",
-    eventTime: {
+    startTime: {
       hours: 4,
+      minutes: 30
+    },
+    endTime: {
+      hours: 10,
       minutes: 30
     },
     eventLocation: "room 412"
