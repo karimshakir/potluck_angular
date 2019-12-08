@@ -1,33 +1,8 @@
 <h2>My Events</h2>
-<!-- <ul class="events">
-  <li
-    *ngFor="let event of events"
-    [class.selected]="event === selectedEvent"
-    (click)="onSelect(event)"
-  >
-    <span class="badge">{{ event.eventId }}</span>
-    {{ event.eventName }}
-    {{ event.eventDate }}
-    {{ event.eventLocation }}
-  </li>
-</ul>
-
-<div *ngIf="selectedEvent">
-  <h2>{{ selectedEvent.eventName | uppercase }} Details</h2>
-  <div><span>id: </span>{{ selectedEvent.eventId }}</div>
-  <div>
-    <label
-      >name:
-      <input [(ngModel)]="selectedEvent.eventName" placeholder="name" />
-    </label>
-  </div>
-</div> -->
 <div id="events">
   <table >
-      <!-- <tr *ngFor="let event of events">
-        <th>Event Id</th>
-        <td>{{event.eventDate}}</td> -->
       <tr>
+        <!-- all this fields may need to be required -->
         <th>Event Name</th>
         <th>Event Date </th>
         <th>Event Time</th>
@@ -36,7 +11,7 @@
       <tr *ngFor="let event of events">
         <td>{{event.eventName}}</td>
         <td>{{event.eventDate}}</td>
-        <td>{{event.eventTime}}</td>
+        <td>{{event.eventTime.hours }} : {{event.eventTime.minutes}}</td>
         <td>{{event.eventLocation}}</td>
       </tr>
   </table>
