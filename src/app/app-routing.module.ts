@@ -9,13 +9,13 @@ import { NewEventComponent } from './new-event/new-event.component';
 
 const routes: Routes = [
   {
-  path: 'login', component: PotLoginComponent 
+  path: 'login', component: PotLoginComponent
 }
-,{
+, {
   path: 'user', component: UserComponent
-},{
-  path: "participants", component: ParticipantComponent
-},{
+}, {
+  path: 'participants', component: ParticipantComponent
+}, {
   path: 'events', component: EventComponent
 },
 {
