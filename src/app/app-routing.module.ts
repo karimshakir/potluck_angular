@@ -5,6 +5,7 @@ import { PotLoginComponent } from './pot-login/pot-login.component';
 import { UserComponent } from './user/user.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { EventComponent } from './event/event.component';
+import { NewEventComponent } from './new-event/new-event.component';
 
 const routes: Routes = [
   {
@@ -17,9 +18,9 @@ const routes: Routes = [
 },{
   path: 'events', component: EventComponent
 },
-// { path: '', redirectTo: '/login',
-// pathMatch: 'full'
-// }
+{
+  path: 'new', component: NewEventComponent
+}
 ];
 
 @NgModule({

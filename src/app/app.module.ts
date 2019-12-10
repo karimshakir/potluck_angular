@@ -9,6 +9,7 @@ import { UserComponent } from "./user/user.component";
 import { ParticipantComponent } from "./participant/participant.component";
 import { PotLoginComponent } from './pot-login/pot-login.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+import { NewEventComponent } from './new-event/new-event.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
     ParticipantComponent,
     PotLoginComponent,
     EventDetailComponent,
+    NewEventComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
