@@ -1,0 +1,22 @@
+<div id="details" *ngIf="event">
+    <h2>Details</h2>
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Start time</th>
+          <th>End time</th>
+          <th>Location</th>
+          <th>Dish</th>
+        </tr>
+      <tr>
+          <td>{{event.eventName}}</td>
+          <td>{{event.eventDate}}</td>
+          <td>{{event.startTime.hours }} : {{event.startTime.minutes}}</td>
+          <td>{{event.endTime.hours }} : {{event.endTime.minutes}}</td>
+          <td>{{event.eventLocation}}</td>
+          <td>{{event.dish}}</td>
+      </tr>
+    </table>
+  
+  </div>
