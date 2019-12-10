@@ -8,7 +8,7 @@ import { EventComponent } from './event/event.component';
 
 const routes: Routes = [
   {
-  path: 'login', component: PotLoginComponent
+  path: 'login', component: PotLoginComponent 
 }
 ,{
   path: 'user', component: UserComponent

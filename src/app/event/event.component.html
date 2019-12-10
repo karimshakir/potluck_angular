@@ -9,7 +9,7 @@
         <th>Event End Time</th>
         <th>Event Location</th>
       </tr>
-      <tr *ngFor="let event of events">
+      <tr *ngFor="let event of events" [class.selected]="event === selectedEvent" (click)="onSelect(event)">
         <td>{{event.eventName}}</td>
         <td>{{event.eventDate}}</td>
         <td>{{event.startTime.hours }} : {{event.startTime.minutes}}</td>
@@ -17,5 +17,6 @@
         <td>{{event.eventLocation}}</td>
       </tr>
   </table>
+  <app-event-detail [event]="selectedEvent"></app-event-detail>
 </div>
 

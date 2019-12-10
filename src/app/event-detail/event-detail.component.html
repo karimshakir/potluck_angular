@@ -1,0 +1,15 @@
+<p>event-detail works!</p>
+<div *ngIf="event">
+   
+    <h2>Details</h2>
+    <h3>{{event.dish}}</h3>
+    <div>
+        {{event.eventLocation}}
+        {{event.eventDate}}
+        {{event.dish}}
+      <!-- <label>name:
+        <input [(ngModel)]="event.eventName" placeholder="name"/>
+      </label> -->
+    </div>
+  
+  </div>

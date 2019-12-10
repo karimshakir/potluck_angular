@@ -1,7 +1,10 @@
 <h3>Login Page here</h3>
+<!-- <app-event></app-event> -->
 <app-pot-login></app-pot-login>
 <nav >
+    <a style="margin-right: 1em;"[routerLink]="['events']">All Events</a>
     <a style="margin-right: 1em;"[routerLink]="['participants']">Who's going where (dummy titile)</a> 
     <a [routerLink]="['user']">User (navigate to user's events)</a><br/>
+   
 </nav>
 <router-outlet></router-outlet>

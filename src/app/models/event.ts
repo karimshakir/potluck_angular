@@ -7,5 +7,6 @@ export class Event {
   startTime: Time;
   endTime: Time;
   eventLocation: string;
+  dish: string;
   constructor() {}
 }

@@ -13,7 +13,8 @@ export const EVENTS: Event[] = [
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 112"
+    eventLocation: "room 112",
+    dish: "fish"
   },
   {
     eventId: 2,
@@ -27,7 +28,8 @@ export const EVENTS: Event[] = [
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 212"
+    eventLocation: "room 212",
+    dish: "fish"
   },
   {
     eventId: 3,
@@ -41,7 +43,8 @@ export const EVENTS: Event[] = [
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 312"
+    eventLocation: "room 312",
+    dish: "fish"
   },
   {
     eventId: 4,
@@ -55,6 +58,7 @@ export const EVENTS: Event[] = [
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 412"
+    eventLocation: "room 412",
+    dish: "fish"
   }
 ];
