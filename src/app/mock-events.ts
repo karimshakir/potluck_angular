@@ -29,7 +29,7 @@ export const EVENTS: Event[] = [
       minutes: 30
     },
     eventLocation: "room 212",
-    dish: "fish"
+    dish: "salad"
   },
   {
     eventId: 3,
@@ -44,7 +44,7 @@ export const EVENTS: Event[] = [
       minutes: 30
     },
     eventLocation: "room 312",
-    dish: "fish"
+    dish: "soup"
   },
   {
     eventId: 4,
@@ -59,6 +59,6 @@ export const EVENTS: Event[] = [
       minutes: 30
     },
     eventLocation: "room 412",
-    dish: "fish"
+    dish: "don't know yet :.("
   }
 ];
