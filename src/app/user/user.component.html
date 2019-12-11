@@ -1,11 +1,20 @@
-<p>user works!</p>
 <div id="user_table">
     <table >
         <tr>
             <th>Event Name</th>
             <th>Event Date </th>
-            <th>Event Time</th>
-            <th>Event Location</th>
+            <th>Start Time</th>
+            <th>End Location</th>
+            <th>Location</th>
+            <th>Dish</th>
+        </tr>
+        <tr *ngFor="let u of user">
+            <td>{{u.eventName}}</td>
+            <td>{{u.eventDate}}</td>
+            <td>{{u.startTime.hours}}:{{u.startTime.minutes}}</td>
+            <td>{{u.endTime.hours}}:{{u.endTime.minutes}}</td>
+            <td>{{u.eventLocation}}</td>
+            <td>{{u.dish}}</td>
         </tr>
     </table>
 </div>

@@ -1,7 +1,7 @@
 import { Time } from "@angular/common";
 
 export class NewEvent {
-  // newId: number;
+  newId: number;
   newName: string;
   newDate: string;
   startTime: Time;

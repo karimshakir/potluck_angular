@@ -1,17 +1,12 @@
-<p>participant works!</p>
 <div id="participants_table">
   <table>
     <tr>
-      <th>Event Name</th>
-      <th>Event Date</th>
-      <th>Event Time</th>
-      <th>Event Location</th>
+      <th>Participant's Name</th>
+      <th>Participant's Dish</th>
     </tr>
-    <!-- <tr *ngFor="let event of events">
-            <td>{{event.eventName}}</td>
-            <td>{{event.eventDate}}</td>
-            <td>{{event.eventTime}}</td>
-            <td>{{event.eventLocation}}</td>
-        </tr> -->
+    <tr *ngFor="let p of participants">
+      <td>Person {{p.userId}}</td>
+      <td>{{p.dish}}</td>
+    </tr>
   </table>
 </div>

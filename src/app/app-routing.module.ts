@@ -6,6 +6,7 @@ import { UserComponent } from './user/user.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { EventComponent } from './event/event.component';
 import { NewEventComponent } from './new-event/new-event.component';
+import { EventHomeComponent } from './event-home/event-home.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
 },
 {
   path: 'new', component: NewEventComponent
+},
+{
+  path: 'home', component: EventHomeComponent
 }
 ];
 

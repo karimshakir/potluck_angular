@@ -14,7 +14,8 @@ export class NewEventComponent implements OnInit {
     date: "",
     startTime: "",
     endTime: "",
-    location: ""
+    location: "",
+    dish:""
   } 
   
   constructor() { }
