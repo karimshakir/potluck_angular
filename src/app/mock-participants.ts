@@ -27,21 +27,27 @@ export const PARTICIPANTS: Participant[] = [
   {
     userId: 1,
     eventId: 1,
-    dish: "Pizza"
+    dish: "Pizza",
+    photo: '"image coming soon"'
   },
   {
     userId: 2,
     eventId: 2,
-    dish: "burgers"
+    dish: "burgers",
+    photo: '"image coming soon"'
+
   },
   {
     userId: 3,
     eventId: 3,
-    dish: "salad"
+    dish: "salad",
+    photo: '"image coming soon"'
+
   },
   {
     userId: 4,
     eventId: 4,
-    dish: "cake"
+    dish: "cake",
+    photo: '"image coming soon"'
   }
 ];

@@ -7,6 +7,7 @@
         <th>Event Start Time</th>
         <th>Event End Time</th>
         <th>Event Location</th>
+        <th>Attending</th>
       </tr>
       <tr *ngFor="let event of events" (click)="onSelect(event)">
         <td>{{event.eventName}}</td>
@@ -14,6 +15,7 @@
         <td>{{event.startTime.hours }} : {{event.startTime.minutes}}</td>
         <td>{{event.endTime.hours }} : {{event.endTime.minutes}}</td>
         <td>{{event.eventLocation}}</td>
+        <td> <app-checkbox></app-checkbox></td>       
       </tr>
   </table>
   <app-event-detail [event]="selectedEvent"></app-event-detail>
