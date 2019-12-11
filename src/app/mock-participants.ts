@@ -27,7 +27,7 @@ export const PARTICIPANTS: Participant[] = [
   {
     userId: 1,
     eventId: 1,
-    dish: "Pickles"
+    dish: "Pizza"
   },
   {
     userId: 2,
