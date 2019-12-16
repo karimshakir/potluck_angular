@@ -1,7 +1,9 @@
 import { Time } from "@angular/common";
 import { Event } from "./../models/event";
 import { Component, OnInit } from "@angular/core";
-import { EVENTS } from "../mock-events";
+// import { EVENTS } from "../mock-events";
+import { PotluckService } from '../potluck.service';
+
 
 @Component({
   selector: "app-event",
@@ -10,12 +12,23 @@ import { EVENTS } from "../mock-events";
 })
 
 export class EventComponent implements OnInit {
-  events = EVENTS;
+  event: Event[];
   selectedEvent: Event;
 
-  constructor() {}
+  constructor(private potluckService: PotluckService) {}
+  
+  ngOnInit() {
+    this.getEvents();
+  }
 
-  ngOnInit() {}
+  getEvents(): void {
+    this.potluckService.getEvents()
+    .subscribe(events => {
+      console.log("LOOK OVER HERE", events)
+      this.event = events
+      })
+  }
+  
 
   onSelect(event: Event): void {
     this.selectedEvent = event;

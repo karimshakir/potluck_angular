@@ -17,7 +17,7 @@ export const USEREVENTS: Event[] = [
     dish: "fish"
   },
   {
-    eventId: 1,
+    eventId: 2,
     eventName: "retirement4",
     eventDate: "2019-04-14",
     startTime: {

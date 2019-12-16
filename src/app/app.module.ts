@@ -12,6 +12,8 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { NewEventComponent } from './new-event/new-event.component';
 import { EventHomeComponent } from './event-home/event-home.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { HttpClientModule }    from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     EventHomeComponent,
     CheckboxComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

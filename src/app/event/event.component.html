@@ -1,4 +1,4 @@
-<div id="events">
+<div id="event">
   <table >
       <tr>
         <!-- all this fields may need to be required -->
@@ -9,12 +9,12 @@
         <th>Event Location</th>
         <th>Attending</th>
       </tr>
-      <tr *ngFor="let event of events" (click)="onSelect(event)">
-        <td>{{event.eventName}}</td>
-        <td>{{event.eventDate}}</td>
-        <td>{{event.startTime.hours }} : {{event.startTime.minutes}}</td>
-        <td>{{event.endTime.hours }} : {{event.endTime.minutes}}</td>
-        <td>{{event.eventLocation}}</td>
+      <tr *ngFor="let event of event" (click)="onSelect(event)">
+        <td>{{event.id}}</td>
+        <td>{{event.date | date: 'MM/dd/yyyy'}}</td>
+        <td>{{event.start_time }} </td>
+        <td>{{event.end_time }}</td>
+        <td>{{event.location}}</td>
         <td> <app-checkbox></app-checkbox></td>       
       </tr>
   </table>

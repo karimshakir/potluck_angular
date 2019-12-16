@@ -1,17 +1,19 @@
-<p>Create Your Next Event</p>
 <div>
-        <!-- will probably put in list and loop  -->
-    <h3>Name: {{new.name}}</h3>
-    <input [(ngModel)]="new.name" placeholder="name">
-    <h3>Date: {{new.date}}</h3>
-    <input [(ngModel)]="new.date" type="date" placeholder="date">
-    <h3>Start time: {{new.startTime}}</h3>
-    <input [(ngModel)]="new.startTime" type="time" placeholder="start time">
-    <h3>End time: {{new.endTime}}</h3>
-    <input [(ngModel)]="new.endTime" type="time" placeholder="end time">
-    <h3>Location: {{new.location}}</h3>
-    <input [(ngModel)]="new.location" placeholder="location">
-    <h3>Dish: {{new.dish}}</h3>
-    <input [(ngModel)]="new.dish" placeholder="dish"><br><br>
-    <button [routerLink]="['/events']">Lets' Go</button>
+    <p>Create Your Next Event</p>
+    <div id="newContainer">
+            <!-- will probably put in list and loop  -->
+        <h3>Name: {{new.newName}}</h3>
+        <input [(ngModel)]="new.newName" type="text" placeholder="name" >
+        <h3>Date: {{new.date}}</h3>
+        <input [(ngModel)]="new.date" type="date" placeholder="date">
+        <h3>Start time: {{new.startTime}}</h3>
+        <input [(ngModel)]="new.startTime" type="time" placeholder="start time">
+        <h3>End time: {{new.endTime}}</h3>
+        <input [(ngModel)]="new.endTime" type="time" placeholder="end time">
+        <h3>Location: {{new.location}}</h3>
+        <input [(ngModel)]="new.location" type="text" placeholder="location">
+        <h3>Dish: {{new.dish}}</h3>
+        <input [(ngModel)]="new.dish" type="text" placeholder="dish"><br><br>
+         <button (click)="postEvent(new.newName, new.date, new.startTime, new.end, new.location, new.dish); new.value=''"style="width: 20%; color: rgb(9, 62, 238); height: 3em; border-radius: 12px; margin-bottom: 3em; background-color: orange;"  [routerLink]="['/events']" >Lets' Go</button>
+    </div>
 </div>
