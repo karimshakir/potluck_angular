@@ -1,5 +1,19 @@
-<div id="login" >
-    <input type="text">
-    <input type="text">
-    <button [routerLink]="['/events']">Login</button>
+<div id="login" 
+style="display: flex; flex-direction: column; justify-content:center; align-items:center;height:12em;
+    margin-top: 17em;
+    opacity: 1;
+    
+">
+<div style="border: solid darkorange; display: flex; flex-direction: column; justify-content:center; align-items:center;
+height: 14em;
+width: 14em;
+font-size: 2em;
+color: darkblue;
+">
+    <strong>Welcome to Potluck!</strong>
+    <h4>please login</h4>
+        <input type="text" style="height: 3em; width: 30em;" placeholder="username"><br/>
+        <input type="text" style="height: 3em; width: 30em;" placeholder="password"><br/>
+        <button [routerLink]="['/events']" style="height: 4em; width: 8em; border-radius: 10em;">Login</button>
+</div>
 </div>

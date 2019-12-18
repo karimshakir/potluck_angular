@@ -50,7 +50,7 @@ deleteEvent(event: Event | number): Observable<Event[]>{
   const url = `${this.deleteUrl}/${id}`
   return this.http.delete<Event[]>(url, this.httpOptions)
   .pipe(map((data: any) => data.result ),
-  catchError(error => { return throwError('Its a Trap!')})
+  catchError(error => { return throwError('Something went wrong in delete!')})
             );
    
 }
