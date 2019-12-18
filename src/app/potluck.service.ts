@@ -3,7 +3,7 @@ import { Event } from './models/event';
 import { EVENTS } from './mock-events';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { NewEvent } from './models/newEvent';
 
@@ -15,7 +15,8 @@ export class PotluckService {
   constructor( private http: HttpClient) { }
   
   private eventUrl = 'http://localhost:8080/events';
-  private postUrl = 'http://localhost:8080/newEvent'
+  private postUrl = 'http://localhost:8080/newEvent';
+  private deleteUrl = 'http://localhost:8080/deleteEvent';;
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -43,6 +44,17 @@ postEvent(newEvent: NewEvent): Observable<NewEvent[]>{
 
 // ____________________________________________________________________________________________________________________
 
+deleteEvent(event: Event | number): Observable<Event[]>{
+  console.log("Delete", event)
+  const id = event
+  const url = `${this.deleteUrl}/${id}`
+  return this.http.delete<Event[]>(url, this.httpOptions)
+  .pipe(map((data: any) => data.result ),
+  catchError(error => { return throwError('Its a Trap!')})
+            );
+   
+}
+// ____________________________________________________________________________________________________________________
 private handleError<T> (operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
 

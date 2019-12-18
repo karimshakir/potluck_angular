@@ -15,7 +15,8 @@
         <td>{{event.start_time }} </td>
         <td>{{event.end_time }}</td>
         <td>{{event.location}}</td>
-        <td> <app-checkbox></app-checkbox></td>       
+        <td> <app-checkbox></app-checkbox></td>  
+        <button (click)="deleteEvent(event.eventid)">Delete Event</button>     
       </tr>
   </table>
   <app-event-detail [event]="selectedEvent"></app-event-detail>

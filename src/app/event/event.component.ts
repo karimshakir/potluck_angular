@@ -29,7 +29,13 @@ export class EventComponent implements OnInit {
       })
   }
   
-
+deleteEvent(event): void{
+  console.log("Event component delete", event)
+  this.potluckService.deleteEvent(event)
+  .subscribe(event => {
+    this.event = event})
+    console.log("Delete Return", this.event)
+}
   onSelect(event: Event): void {
     this.selectedEvent = event;
   }
