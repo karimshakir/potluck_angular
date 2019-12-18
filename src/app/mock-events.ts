@@ -2,63 +2,63 @@ import { Event } from "./models/event";
 
 export const EVENTS: Event[] = [
   {
-    eventId: 1,
-    eventName: "retirement1",
-    eventDate: "2019-01-11",
-    startTime: {
+    eventid: 1,
+    event_name: "retirement1",
+    event_date: "2019-01-11",
+    start_time: {
       hours: 1,
       minutes: 30
     },
-    endTime: {
+    end_time: {
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 112",
+    location: "room 112",
     dish: "fish"
   },
   {
-    eventId: 2,
-    eventName: "retirement2",
-    eventDate: "2019-02-12",
-    startTime: {
+    eventid: 2,
+    event_name: "retirement2",
+    event_date: "2019-02-12",
+    start_time: {
       hours: 2,
       minutes: 30
     },
-    endTime: {
+    end_time: {
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 212",
+    location: "room 212",
     dish: "salad"
   },
   {
-    eventId: 3,
-    eventName: "retirement3",
-    eventDate: "2019-03-13",
-    startTime: {
+    eventid: 3,
+    event_name: "retirement3",
+    event_date: "2019-03-13",
+    start_time: {
       hours: 3,
       minutes: 30
     },
-    endTime: {
+    end_time: {
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 312",
+    location: "room 312",
     dish: "soup"
   },
   {
-    eventId: 4,
-    eventName: "retirement4",
-    eventDate: "2019-04-14",
-    startTime: {
+    eventid: 4,
+    event_name: "retirement4",
+    event_date: "2019-04-14",
+    start_time: {
       hours: 4,
       minutes: 30
     },
-    endTime: {
+    end_time: {
       hours: 10,
       minutes: 30
     },
-    eventLocation: "room 412",
+    location: "room 412",
     dish: "don't know yet :.("
   }
 ];

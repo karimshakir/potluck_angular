@@ -1,12 +1,12 @@
 import { Time } from "@angular/common";
 
 export class NewEvent {
-  newId: number;
-  newName: string;
-  newDate: string;
-  startTime: Time;
-  endTime: Time;
-  newLocation: string;
-  dish: string;
+  eventid: number;
+  event_name: string;
+  event_date: Date;
+  start_time: Time;
+  end_time: Time;
+  location: string;
+  // dish: string;
   constructor() {}
 }

@@ -15,7 +15,7 @@ export class PotluckService {
   constructor( private http: HttpClient) { }
   
   private eventUrl = 'http://localhost:8080/events';
-
+  private postUrl = 'http://localhost:8080/newEvent'
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -35,8 +35,10 @@ getEvents (): Observable<Event[]> {
 
 // ____________________________________________________________________________________________________________________
 
-postEvent({newDate}: NewEvent): Observable<NewEvent[]>{
-  return this.http.post<NewEvent[]>(this.eventUrl, newDate, this.httpOptions);
+
+postEvent(newEvent: NewEvent): Observable<NewEvent[]>{
+  console.log("SERVICE", newEvent)
+  return this.http.post<NewEvent[]>(this.postUrl, newEvent, this.httpOptions)
 }
 
 // ____________________________________________________________________________________________________________________
@@ -44,11 +46,11 @@ postEvent({newDate}: NewEvent): Observable<NewEvent[]>{
 private handleError<T> (operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
 
-    // TODO: send the error to remote logging infrastructure
-    console.error("HERE IS ERROR", error); // log to console instead
+  
+    console.error("ERROR Alarm", error); 
 
 
-    // Let the app keep running by returning an empty result.
+  
     return of(result as T);
   };
 }

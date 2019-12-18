@@ -24,7 +24,7 @@ export class EventComponent implements OnInit {
   getEvents(): void {
     this.potluckService.getEvents()
     .subscribe(events => {
-      console.log("LOOK OVER HERE", events)
+      console.log("LOOK OVER HERE this is in event.comp.ts", events)
       this.event = events
       })
   }

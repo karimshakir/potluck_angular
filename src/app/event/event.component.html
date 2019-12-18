@@ -10,8 +10,8 @@
         <th>Attending</th>
       </tr>
       <tr *ngFor="let event of event" (click)="onSelect(event)">
-        <td>{{event.id}}</td>
-        <td>{{event.date | date: 'MM/dd/yyyy'}}</td>
+        <td>{{event.event_name}}</td>
+        <td>{{event.event_date | date: 'MM/dd/yyyy'}}</td>
         <td>{{event.start_time }} </td>
         <td>{{event.end_time }}</td>
         <td>{{event.location}}</td>
