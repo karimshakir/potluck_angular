@@ -7,6 +7,7 @@ export class Event {
   start_time: Time;
   end_time: Time;
   location: string;
-  dish: string;
+  // dish: string;
+  userid: number;
   constructor() {}
 }

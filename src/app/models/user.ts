@@ -1,12 +1,10 @@
 import { Time } from "@angular/common";
 
 export class User {
-  eventId: number;
-  eventName: string;
-  eventDate: string;
-  startTime: Time;
-  endTime: Time;
-  eventLocation: string;
-  dish: string;
+  id: 2;
+  fname: string;
+  lname: string;
+  username: string;
+  userpassword: string;
   constructor() {}
 }

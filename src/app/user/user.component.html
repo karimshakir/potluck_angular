@@ -8,12 +8,12 @@
             <th>Location</th>
             <th>Dish</th>
         </tr>
-        <tr *ngFor="let u of user">
-            <td>{{u.eventName}}</td>
-            <td>{{u.eventDate}}</td>
-            <td>{{u.startTime.hours}}:{{u.startTime.minutes}}</td>
-            <td>{{u.endTime.hours}}:{{u.endTime.minutes}}</td>
-            <td>{{u.eventLocation}}</td>
+        <tr *ngFor="let u of userEvent">
+            <td>{{u.event_name}}</td>
+            <td>{{u.event_date | date: 'MM/dd/yyyy'}}</td>
+            <td>{{u.start_time}}</td>
+            <td>{{u.end_time}}</td>
+            <td>{{u.location}}</td>
             <td>{{u.dish}}</td>
         </tr>
     </table>

@@ -8,5 +8,6 @@ export class NewEvent {
   end_time: Time;
   location: string;
   // dish: string;
+  // userid: number;
   constructor() {}
 }

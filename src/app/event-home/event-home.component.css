@@ -7,21 +7,3 @@
     background-position:50% 50%;
   } */
 
-
-  body, html {
-    height: 100%;
-  }
-  
-  .bg {
-    /* The image used */
-    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.quill.com%2Fcontent%2Findex%2Fresource-center%2Foffice-snacks-coffee%2Ftips-and-tricks%2Foffice-potluck-etiquette-tips-ideas%2Fimages%2Foffice-potluck-etiquette-tips-ideas_960.jpg&imgrefurl=https%3A%2F%2Fwww.quill.com%2Fcontent%2Findex%2Fresource-center%2Foffice-snacks-coffee%2Ftips-and-tricks%2Foffice-potluck-etiquette-tips-ideas%2F&docid=HsRwg-C74qxtUM&tbnid=meAft0fez18P1M%3A&vet=10ahUKEwjM7veuvr_mAhXDK80KHXM2BX4QMwhuKAIwAg..i&w=960&h=406&bih=772&biw=1440&q=office%20potluck&ved=0ahUKEwjM7veuvr_mAhXDK80KHXM2BX4QMwhuKAIwAg&iact=mrc&uact=8");
-
-
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }

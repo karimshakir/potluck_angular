@@ -1,22 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Event } from './models/event';
-import { EVENTS } from './mock-events';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { NewEvent } from './models/newEvent';
+import { User } from './models/user';
+import { UserEvents } from './models/userEvents';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PotluckService {
+  static getEventsById(user: any) {
+    throw new Error("Method not implemented.");
+  }
 
   constructor( private http: HttpClient) { }
   
   private eventUrl = 'http://localhost:8080/events';
   private postUrl = 'http://localhost:8080/newEvent';
-  private deleteUrl = 'http://localhost:8080/deleteEvent';;
+  private deleteUrl = 'http://localhost:8080/deleteEvent';
+  private userUrl = 'http://localhost:8080/user'
+  private userEventUrl = 'http://localhost:8080/userEvents'
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -33,6 +39,23 @@ getEvents (): Observable<Event[]> {
   );
 }
 
+getUser (): Observable<User[]>{
+  const id = 2
+  const url = `${this.userUrl}/${id}`
+  return this.http.get<User[]>(url)
+  // .pipe(map((data: any) => data.result ),
+  // catchError(error => { return throwError('Something went wrong in delete!')})
+  // );
+  
+}
+// ____________________________________________________________________________________________________________________
+getEventsById(user: User): Observable<UserEvents[]>{
+
+  console.log("SERVICE GET U E", user.id)
+  const id = user.id
+  const url = `${this.userEventUrl}/${id}`
+  return this.http.get<UserEvents[]>(url)
+}
 
 // ____________________________________________________________________________________________________________________
 
@@ -51,7 +74,7 @@ deleteEvent(event: Event | number): Observable<Event[]>{
   return this.http.delete<Event[]>(url, this.httpOptions)
   .pipe(map((data: any) => data.result ),
   catchError(error => { return throwError('Something went wrong in delete!')})
-            );
+  );
    
 }
 // ____________________________________________________________________________________________________________________

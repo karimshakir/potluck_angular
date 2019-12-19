@@ -14,6 +14,12 @@ color: darkblue;
     <h4>please login</h4>
         <input type="text" style="height: 3em; width: 30em;" placeholder="username"><br/>
         <input type="text" style="height: 3em; width: 30em;" placeholder="password"><br/>
-        <button [routerLink]="['/events']" style="height: 4em; width: 8em; border-radius: 10em;">Login</button>
+        <button (click)="getUser(user)"
+        
+           
+            style="height: 4em; width: 8em; border-radius: 10em;"
+        >  
+            Login
+        </button>
 </div>
 </div>

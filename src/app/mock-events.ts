@@ -2,6 +2,7 @@ import { Event } from "./models/event";
 
 export const EVENTS: Event[] = [
   {
+   userid:2,
     eventid: 1,
     event_name: "retirement1",
     event_date: "2019-01-11",
@@ -14,9 +15,9 @@ export const EVENTS: Event[] = [
       minutes: 30
     },
     location: "room 112",
-    dish: "fish"
+    // dish: "fish"
   },
-  {
+  { userid:2,
     eventid: 2,
     event_name: "retirement2",
     event_date: "2019-02-12",
@@ -29,9 +30,10 @@ export const EVENTS: Event[] = [
       minutes: 30
     },
     location: "room 212",
-    dish: "salad"
+    // dish: "salad"
   },
   {
+    userid:2,
     eventid: 3,
     event_name: "retirement3",
     event_date: "2019-03-13",
@@ -44,9 +46,10 @@ export const EVENTS: Event[] = [
       minutes: 30
     },
     location: "room 312",
-    dish: "soup"
+    // dish: "soup"
   },
   {
+    userid:2,
     eventid: 4,
     event_name: "retirement4",
     event_date: "2019-04-14",
@@ -59,6 +62,6 @@ export const EVENTS: Event[] = [
       minutes: 30
     },
     location: "room 412",
-    dish: "don't know yet :.("
+    // dish: "don't know yet :.("
   }
 ];
