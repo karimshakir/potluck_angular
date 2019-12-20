@@ -20,9 +20,10 @@ export class PotluckService {
   
   private eventUrl = 'http://localhost:8080/events';
   private postUrl = 'http://localhost:8080/newEvent';
-  private deleteUrl = 'http://localhost:8080/deleteEvent';
+  private deleteUrl = 'http://localhost:8080/deleteEvent/';
   private userUrl = 'http://localhost:8080/user'
   private userEventUrl = 'http://localhost:8080/userEvents'
+  private newUserEventUrl = 'http://localhost:8080/userNewEvents'
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -43,9 +44,9 @@ getUser (): Observable<User[]>{
   const id = 2
   const url = `${this.userUrl}/${id}`
   return this.http.get<User[]>(url)
-  // .pipe(map((data: any) => data.result ),
-  // catchError(error => { return throwError('Something went wrong in delete!')})
-  // );
+  .pipe(map((data: any) => data.result ),
+  catchError(error => { return throwError('Something went wrong in delete!')})
+  );
   
 }
 // ____________________________________________________________________________________________________________________
@@ -59,6 +60,14 @@ getEventsById(user: User): Observable<UserEvents[]>{
 
 // ____________________________________________________________________________________________________________________
 
+updateUserEvents(event: Event): Observable<any>{
+  console.log("UPDATE U SERV", event)
+  const userid = 2
+  const id = event
+  // const url = `${this.newUserEventUrl}/${id}`
+  return this.http.put(`${this.newUserEventUrl}/${id}`, userid)
+}
+// ____________________________________________________________________________________________________________________
 
 postEvent(newEvent: NewEvent): Observable<NewEvent[]>{
   console.log("SERVICE", newEvent)

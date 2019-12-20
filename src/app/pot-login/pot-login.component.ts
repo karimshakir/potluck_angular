@@ -21,7 +21,6 @@ export class PotLoginComponent implements OnInit {
     .subscribe(events => {
       console.log("First", events)
       this.user = events;
-      console.log("GET USER Return", this.user)
     })
   }
   ngOnInit() {

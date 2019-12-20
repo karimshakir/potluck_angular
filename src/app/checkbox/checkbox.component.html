@@ -1,2 +1,2 @@
-<input type="checkbox" [checked]="checkbox.attending" (change)="checkbox.attending = !checkbox.attending">
+<input type="checkbox" [checked]="checkbox.attending"  (change)="checkbox.attending = !checkbox.attending; checkbox.attending ? updateUserEvents(event) : null">
 <!-- <p>{{checkbox.attending}}</p> -->

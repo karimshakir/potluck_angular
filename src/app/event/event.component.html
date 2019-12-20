@@ -9,14 +9,17 @@
         <th>Event Location</th>
         <th>Attending</th>
       </tr>
-      <tr *ngFor="let event of event" (click)="onSelect(event)">
-        <td>{{event.event_name}}</td>
-        <td>{{event.event_date | date: 'MM/dd/yyyy'}}</td>
-        <td>{{event.start_time}} </td>
-        <td>{{event.end_time }}</td>
-        <td>{{event.location}}</td>
-        <td> <app-checkbox></app-checkbox></td>  
-        <button (click)="deleteEvent(event.eventid)">Delete Event</button>     
+      <tr *ngFor="let events of event" (click)="onSelect(event)">
+        <td>{{events.event_name}}</td>
+        <td>{{events.event_date | date: 'MM/dd/yyyy'}}</td>
+        <td>{{events.start_time}} </td>
+        <td>{{events.end_time }}</td>
+        <td>{{events.location}}</td>
+        <!-- <app-checkbox [event]="selectedEvent"></app-checkbox>  -->
+        <button (click)="updateUserEvents(events.eventid)">Attending</button>
+
+        
+        <button (click)="deleteEvent(events.eventid)">Delete Event</button>     
       </tr>
   </table>
   <app-event-detail [event]="selectedEvent"></app-event-detail>
