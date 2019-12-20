@@ -1,6 +1,8 @@
-import { Participant } from "./../models/participant";
+
 import { Component, OnInit } from "@angular/core";
-import { PARTICIPANTS } from "../mock-participants";
+import { Event } from '../models/event';
+import { PotluckService } from '../potluck.service';
+Event
 
 @Component({
   selector: "app-participant",
@@ -8,14 +10,24 @@ import { PARTICIPANTS } from "../mock-participants";
   styleUrls: ["./participant.component.css"]
 })
 export class ParticipantComponent implements OnInit {
-  participants = PARTICIPANTS;
-  selectedParticipant: Participant;
+  event: Event[];
+ 
 
-  constructor() {}
-
-  ngOnInit() {}
-
-  onSelect(participant: Participant): void {
-    this.selectedParticipant = participant;
+  constructor(private potluckService: PotluckService) {}
+  
+  ngOnInit() {
+    this.getEvents();
   }
+
+  getEvents(): void {
+    this.potluckService.getEvents()
+    .subscribe(events => {
+      console.log("in what was Participants", events)
+      this.event = events
+      })
+  }
+
+  // onSelect(participant: Participant): void {
+  //   this.selectedParticipant = participant;
+  // }
 }

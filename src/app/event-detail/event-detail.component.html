@@ -1,6 +1,6 @@
 <div id="details" *ngIf="event">
     <h2>Details</h2>
-    <table>
+    <table style="width: 100%">
         <tr>
           <th>Name</th>
           <th>Date</th>
@@ -10,11 +10,11 @@
           <th>Dish</th>
         </tr>
       <tr>
-          <td>{{event.eventName}}</td>
-          <td>{{event.eventDate}}</td>
-          <!-- <td>{{event.startTime.hours }} : {{event.startTime.minutes}}</td>
-          <td>{{event.endTime.hours }} : {{event.endTime.minutes}}</td> -->
-          <td>{{event.eventLocation}}</td>
+          <td>{{event.event_name}}</td>
+          <td>{{event.event_date | date: 'MM/dd/yyyy'}}</td>
+          <td>{{event.start_time }} </td>
+          <td>{{event.end_time }}</td>
+          <td>{{event.location}}</td>
           <td>{{event.dish}}</td>
       </tr>
     </table>

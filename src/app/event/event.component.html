@@ -1,25 +1,29 @@
-<div id="event">
-  <table >
-      <tr>
+<div id="event" >
+  <table style="width: 100%;">
+      <tr > 
         <!-- all this fields may need to be required -->
         <th>Event Name</th>
         <th>Event Date </th>
-        <th>Event Start Time</th>
-        <th>Event End Time</th>
+        <!-- <th>Event Start Time</th>
+        <th>Event End Time</th> -->
         <th>Event Location</th>
         <th>Attending</th>
+        <th >Remove event</th>
       </tr>
-      <tr *ngFor="let events of event" (click)="onSelect(event)">
-        <td>{{events.event_name}}</td>
+      <tr  *ngFor="let events of event" (click)="onSelect(events)">
+        <td >{{events.event_name}}</td>
         <td>{{events.event_date | date: 'MM/dd/yyyy'}}</td>
-        <td>{{events.start_time}} </td>
-        <td>{{events.end_time }}</td>
+        <!-- <td>{{events.start_time}} </td>
+        <td>{{events.end_time }}</td> -->
         <td>{{events.location}}</td>
         <!-- <app-checkbox [event]="selectedEvent"></app-checkbox>  -->
-        <button (click)="updateUserEvents(events.eventid)">Attending</button>
+       <td>
+          <button style="background-color: rgb(13, 238, 43);" (click)="updateUserEvents(events.eventid)">Attending</button>
+       </td> 
 
-        
-        <button (click)="deleteEvent(events.eventid)">Delete Event</button>     
+        <button style="background-color: rgb(236, 54, 41);"(click)="deleteEvent(events.eventid);"> 
+          Delete Event
+        </button>    
       </tr>
   </table>
   <app-event-detail [event]="selectedEvent"></app-event-detail>

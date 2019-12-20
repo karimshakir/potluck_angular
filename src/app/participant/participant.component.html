@@ -1,12 +1,20 @@
 <div id="participants_table">
-  <table style="width: 100%">
-    <tr>
-      <th>Participant's Name</th>
-      <th>Participant's Dish</th>
-    </tr>
-    <tr *ngFor="let p of participants">
-      <td>Person {{p.userId}}</td>
-      <td>{{p.dish}} - {{p.photo}}</td>
-    </tr>
-  </table>
+    <table style="width: 100%;">
+        <tr > 
+          <!-- all this fields may need to be required -->
+          <th>Event Name</th>
+          <th>Event Date </th>
+          <th>Event Start Time</th>
+          <th>Event End Time</th>
+          <th>Event Location</th>
+        </tr>
+        <tr *ngFor="let events of event">
+          <td>{{events.event_name}}</td>
+          <td>{{events.event_date | date: 'MM/dd/yyyy'}}</td>
+          <td>{{events.start_time}} </td>
+          <td>{{events.end_time }}</td>
+          <td>{{events.location}}</td>
+          <!-- <app-checkbox [event]="selectedEvent"></app-checkbox>  -->
+        </tr>
+    </table>
 </div>

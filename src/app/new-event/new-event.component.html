@@ -16,10 +16,10 @@
         
         <h3>Location: {{new.location}}</h3>
         <input [(ngModel)]="new.location" type="text" placeholder="location">
-
+        <br/>
         <!-- <h3>Dish: {{new.dish}}</h3>
         <input [(ngModel)]="new.dish" type="text" placeholder="dish"><br><br> -->
 
-         <button (click)="postEvent(new.event_name, new.event_date, new.start_time, new.end_time, new.location, new.dish); new=''"style="width: 20%; color: rgb(9, 62, 238); height: 3em; border-radius: 12px; margin-bottom: 3em; background-color: orange;"  [routerLink]="['/events']" >Lets' Go</button>
+         <button (click)="postEvent(new.event_name, new.event_date, new.start_time, new.end_time, new.location); new=''"style="width: 20%; color: rgb(9, 62, 238); height: 3em; border-radius: 12px; margin-bottom: 3em; background-color: orange;"  [routerLink]="['/events']" >Lets' Go</button>
     </div>
 </div>

@@ -9,7 +9,7 @@ import { Event } from '../models/event';
 export class EventDetailComponent implements OnInit {
 
 
-  @Input() event: Event;
+  @Input() event = Event;
   
   constructor() { }
 
