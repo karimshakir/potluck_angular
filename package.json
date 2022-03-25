@@ -14,7 +14,7 @@
     "serialize-javascript": ">=2.1.1",
     "kind-of": ">=6.0.3",
     "acorn": ">=6.4.1",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "websocket-extensions": ">=0.1.4",
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
